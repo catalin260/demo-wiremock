@@ -1,0 +1,65 @@
+security:
+    oauth2:
+        client:
+            scope: demo
+            other-scopes: wiremock
+        resource:
+            token-info-uri: https://localhost:9002/demo-wiremock #trebuie setat, dar nu este folosit
+            user-info-uri: https://localhost:9002/demo-wiremock #trebuie setat, dar nu este folosit
+    jwt:
+        key-store: classpath:jwt_keystore.jks
+        key-pair-password: wiremock
+        key-store-password: wiremock
+        key-pair-alias: wiremock
+        public-key: classpath:public.txt
+        valid-hours: 8 #cate ore e valabil access_token
+server:
+    port: 9002
+    http-port: 10002
+    ssl:
+        key-store-type: PKCS12
+        key-store: classpath:myp12keystore.p12
+        key-store-password: wiremock
+        key-alias: wiremock
+        key-password: wiremock
+        enabled: false
+    servlet:
+        context-path: /demo-wiremock
+spring:
+    profiles:
+        active: dev
+#    dev-tools:
+#        add-properties: false
+    servlet:
+        multipart:
+            max-file-size: 25MB
+            max-request-size: 25MB
+    datasource:
+        driverClassName: org.mariadb.jdbc.Driver
+        password: root
+        url: jdbc:mariadb://localhost:3306/wiremock
+        username: root
+    jackson:
+        serialization:
+            INDENT_OUTPUT: true
+    jpa:
+        hibernate:
+            ddl-auto: update
+        properties:
+            hibernate:
+                dialect: org.hibernate.dialect.MySQL8Dialect
+                jdbc:
+                    lob:
+                        non_contextual_creation: true
+        show-sql: true
+#    thymeleaf:
+#        cache: false
+storage:
+    location: ./uploads
+
+#Master user credentials.
+superadmin_user: wiremock_master
+superadmin_pass: wiremock_master
+superadmin_mail: tudoroiu.catalin@gmail.com
+speradmin_firstname: Catalin
+superadmin_lastname: Tudoroiu

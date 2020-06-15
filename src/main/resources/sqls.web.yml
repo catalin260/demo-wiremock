@@ -1,0 +1,144 @@
+#Fisier query-uri SQL
+
+#<editor-fold desc="Query Useri" defaultstate="collapsed">
+UserService_updateLastLogin: |
+  update users set user_last_login = CURRENT_TIMESTAMP()
+  where username = :username;
+  select username;
+
+UserService_list: |
+  select
+    user_id,
+    user_username,
+    user_password,
+    user_status,
+    user_date_add,
+    user_last_login
+
+  from
+      users
+
+  where [where]
+
+  order by user_id asc
+
+UserService_updatePassword: |
+  update users set user_password = :user_password
+  where user_username = :user_username
+
+UserService_returnPasswordDecrypted: |
+  select
+    user_password
+  from users
+  where user_username = :user_username
+
+UserService_insertUser: |
+  insert into users (
+    user_username,
+    user_password
+  )
+  values (
+    :username,
+    :password
+  )
+#</editor-fold>
+
+#<editor-fold desc="Query Accounts" defaultstate="collapsed">
+AccountsService_insert: |
+  insert
+  into accounts (
+    user_id,
+    account_currency,
+    account_type,
+    account_ballance
+  )
+  values (
+    :user_id,
+    :account_currency,
+    :account_type,
+    :account_ballance
+  )
+
+AccountsService_increaseAccountBallance: |
+  update accounts
+  set account_ballance = account_ballance + :amount
+  where account_id = :account_id
+
+AccountsService_decreaseAccountBallance: |
+  update accounts
+  set account_ballance = account_ballance - :amount
+  where account_id = :account_id
+
+AccountsService_list: |
+  select
+    a.account_id,
+    a.user_id,
+    a.account_currency,
+    a.account_created_on,
+    a.account_last_update,
+    a.account_status,
+    a.account_type,
+    a.account_ballance,
+    u.user_id,
+    u.user_status,
+    u.user_username,
+    u.user_date_add,
+    u.user_last_login
+  from
+    accounts a,
+    users u
+
+  where [where]
+  and
+    case
+        when :user_id is null then 1 = 1
+        else u.user_id = :user_id
+    end
+  and a.user_id = u.user_id
+#</editor-fold>
+
+#<editor-fold desc="Query Transactions" defaultstate="collapsed">
+TransactionsService_list: |
+  select
+      t.trans_id,
+      t.trans_datetime,
+      t.trans_desc,
+      t.trans_amount,
+      t.trans_status,
+      a_src.account_id as account_id_src,
+      a_dest.account_id as account_id_dest
+  from
+      transactions t
+  left join accounts a_src on t.account_id_src = a_src.account_id
+  left join accounts a_dest on t.account_id_dest = a_dest.account_id
+  left join users u on u.user_id = a_src.account_id
+
+  where [where]
+   and
+      case
+          when :user_id is null then 1 = 1
+          else u.user_id = :user_id
+      end
+
+TransactionsService_insert: |
+  insert
+      into transactions (
+         account_id_src,
+         account_id_dest,
+         trans_desc,
+         trans_amount
+      )
+      values (
+        :account_id_src,
+        :account_id_dest,
+        :trans_desc,
+        :trans_amount
+     )
+
+TransactionsService_finishTransaction: |
+  update transactions
+  set
+    trans_status = 'done',
+    trans_datetime_exec = CURRENT_TIMESTAMP()
+  where trans_id = :trans_id
+#</editor-fold>

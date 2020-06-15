@@ -1,0 +1,442 @@
+{
+	"info": {
+		"_postman_id": "eb4a938e-8b6f-435e-acbb-795798ab7140",
+		"name": "wiremock-localhost",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "WEB",
+			"item": [
+				{
+					"name": "user",
+					"item": [
+						{
+							"name": "/web/user/me",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{TEST_BASE_API_URL}}/web/user/me",
+									"host": [
+										"{{TEST_BASE_API_URL}}"
+									],
+									"path": [
+										"web",
+										"user",
+										"me"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "/web/user/list",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1NzMwNDgyOTcsInVzZXJfbmFtZSI6InVzZXIiLCJhdXRob3JpdGllcyI6WyJST0xFX1VTRVIiXSwianRpIjoiMTUyMTI2MmQtOThjZS00NmI2LTgwNWMtYTdkNmRmZGZjN2UwIiwiY2xpZW50X2lkIjoiY2xpZW50SWQiLCJzY29wZSI6WyJyZWFkIiwid3JpdGUiXX0.BXq0TruA2gWgpKtj2OLEw4uPqHfVWztAiHsIuiPwRU4Aa3Fzh6MokvJnaE4QLtxj_KYhHEHOC1OXHUgRmkT1Xx863ZcQVQpBNgabad5pccI8hwJjFvDjJl6D0sa8aK9muyhm6SaoX2ui5L3Vrwiae2tqmrcWfeI5MoNH_GvNZktzqL9VVxyayLZnGdTvb3l0XYDnhwcY21s8fEmE_VN5j8fmr1evprqdcGfpuxKhr7AGGHEtctWr8bFNXbLP7oGpgW5xqjl7GlxW2sPTGBeEZ1X_3CHzzgxqCLoYF9B2CY3c1oLMhWE-2YbcvlfphHCXzTI3HriaZVU5HTPWx9ox7A",
+										"disabled": true
+									},
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"query\": {\n        \n    }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{TEST_BASE_API_URL}}/web/user/list",
+									"host": [
+										"{{TEST_BASE_API_URL}}"
+									],
+									"path": [
+										"web",
+										"user",
+										"list"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "/web/user/save",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1NzMwNDgyOTcsInVzZXJfbmFtZSI6InVzZXIiLCJhdXRob3JpdGllcyI6WyJST0xFX1VTRVIiXSwianRpIjoiMTUyMTI2MmQtOThjZS00NmI2LTgwNWMtYTdkNmRmZGZjN2UwIiwiY2xpZW50X2lkIjoiY2xpZW50SWQiLCJzY29wZSI6WyJyZWFkIiwid3JpdGUiXX0.BXq0TruA2gWgpKtj2OLEw4uPqHfVWztAiHsIuiPwRU4Aa3Fzh6MokvJnaE4QLtxj_KYhHEHOC1OXHUgRmkT1Xx863ZcQVQpBNgabad5pccI8hwJjFvDjJl6D0sa8aK9muyhm6SaoX2ui5L3Vrwiae2tqmrcWfeI5MoNH_GvNZktzqL9VVxyayLZnGdTvb3l0XYDnhwcY21s8fEmE_VN5j8fmr1evprqdcGfpuxKhr7AGGHEtctWr8bFNXbLP7oGpgW5xqjl7GlxW2sPTGBeEZ1X_3CHzzgxqCLoYF9B2CY3c1oLMhWE-2YbcvlfphHCXzTI3HriaZVU5HTPWx9ox7A",
+										"disabled": true
+									},
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"query\": {\n        \"username\": \"john\",\n        \"password\": \"tudoroiu\"\n    }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{TEST_BASE_API_URL}}/web/user/save",
+									"host": [
+										"{{TEST_BASE_API_URL}}"
+									],
+									"path": [
+										"web",
+										"user",
+										"save"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "accounts",
+					"item": [
+						{
+							"name": "/web/accounts/list",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1NzMwNDgyOTcsInVzZXJfbmFtZSI6InVzZXIiLCJhdXRob3JpdGllcyI6WyJST0xFX1VTRVIiXSwianRpIjoiMTUyMTI2MmQtOThjZS00NmI2LTgwNWMtYTdkNmRmZGZjN2UwIiwiY2xpZW50X2lkIjoiY2xpZW50SWQiLCJzY29wZSI6WyJyZWFkIiwid3JpdGUiXX0.BXq0TruA2gWgpKtj2OLEw4uPqHfVWztAiHsIuiPwRU4Aa3Fzh6MokvJnaE4QLtxj_KYhHEHOC1OXHUgRmkT1Xx863ZcQVQpBNgabad5pccI8hwJjFvDjJl6D0sa8aK9muyhm6SaoX2ui5L3Vrwiae2tqmrcWfeI5MoNH_GvNZktzqL9VVxyayLZnGdTvb3l0XYDnhwcY21s8fEmE_VN5j8fmr1evprqdcGfpuxKhr7AGGHEtctWr8bFNXbLP7oGpgW5xqjl7GlxW2sPTGBeEZ1X_3CHzzgxqCLoYF9B2CY3c1oLMhWE-2YbcvlfphHCXzTI3HriaZVU5HTPWx9ox7A",
+										"disabled": true
+									},
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"query\": {\n        \n    }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{TEST_BASE_API_URL}}/web/accounts/list",
+									"host": [
+										"{{TEST_BASE_API_URL}}"
+									],
+									"path": [
+										"web",
+										"accounts",
+										"list"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "/web/accounts/save",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1NzMwNDgyOTcsInVzZXJfbmFtZSI6InVzZXIiLCJhdXRob3JpdGllcyI6WyJST0xFX1VTRVIiXSwianRpIjoiMTUyMTI2MmQtOThjZS00NmI2LTgwNWMtYTdkNmRmZGZjN2UwIiwiY2xpZW50X2lkIjoiY2xpZW50SWQiLCJzY29wZSI6WyJyZWFkIiwid3JpdGUiXX0.BXq0TruA2gWgpKtj2OLEw4uPqHfVWztAiHsIuiPwRU4Aa3Fzh6MokvJnaE4QLtxj_KYhHEHOC1OXHUgRmkT1Xx863ZcQVQpBNgabad5pccI8hwJjFvDjJl6D0sa8aK9muyhm6SaoX2ui5L3Vrwiae2tqmrcWfeI5MoNH_GvNZktzqL9VVxyayLZnGdTvb3l0XYDnhwcY21s8fEmE_VN5j8fmr1evprqdcGfpuxKhr7AGGHEtctWr8bFNXbLP7oGpgW5xqjl7GlxW2sPTGBeEZ1X_3CHzzgxqCLoYF9B2CY3c1oLMhWE-2YbcvlfphHCXzTI3HriaZVU5HTPWx9ox7A",
+										"disabled": true
+									},
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"query\": {\n        \"account_currency\": \"EUR\",\n        \"account_type\": \"DEBIT_CARD\",\n        \"account_ballance\": 999999,\n        \"user_id\": 1\n    }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{TEST_BASE_API_URL}}/web/accounts/save",
+									"host": [
+										"{{TEST_BASE_API_URL}}"
+									],
+									"path": [
+										"web",
+										"accounts",
+										"save"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "transactions",
+					"item": [
+						{
+							"name": "/web/transactions/list",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1NzMwNDgyOTcsInVzZXJfbmFtZSI6InVzZXIiLCJhdXRob3JpdGllcyI6WyJST0xFX1VTRVIiXSwianRpIjoiMTUyMTI2MmQtOThjZS00NmI2LTgwNWMtYTdkNmRmZGZjN2UwIiwiY2xpZW50X2lkIjoiY2xpZW50SWQiLCJzY29wZSI6WyJyZWFkIiwid3JpdGUiXX0.BXq0TruA2gWgpKtj2OLEw4uPqHfVWztAiHsIuiPwRU4Aa3Fzh6MokvJnaE4QLtxj_KYhHEHOC1OXHUgRmkT1Xx863ZcQVQpBNgabad5pccI8hwJjFvDjJl6D0sa8aK9muyhm6SaoX2ui5L3Vrwiae2tqmrcWfeI5MoNH_GvNZktzqL9VVxyayLZnGdTvb3l0XYDnhwcY21s8fEmE_VN5j8fmr1evprqdcGfpuxKhr7AGGHEtctWr8bFNXbLP7oGpgW5xqjl7GlxW2sPTGBeEZ1X_3CHzzgxqCLoYF9B2CY3c1oLMhWE-2YbcvlfphHCXzTI3HriaZVU5HTPWx9ox7A",
+										"disabled": true
+									},
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"query\": {\n        \n    }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{TEST_BASE_API_URL}}/web/transactions/list",
+									"host": [
+										"{{TEST_BASE_API_URL}}"
+									],
+									"path": [
+										"web",
+										"transactions",
+										"list"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "/web/transactions/save",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1NzMwNDgyOTcsInVzZXJfbmFtZSI6InVzZXIiLCJhdXRob3JpdGllcyI6WyJST0xFX1VTRVIiXSwianRpIjoiMTUyMTI2MmQtOThjZS00NmI2LTgwNWMtYTdkNmRmZGZjN2UwIiwiY2xpZW50X2lkIjoiY2xpZW50SWQiLCJzY29wZSI6WyJyZWFkIiwid3JpdGUiXX0.BXq0TruA2gWgpKtj2OLEw4uPqHfVWztAiHsIuiPwRU4Aa3Fzh6MokvJnaE4QLtxj_KYhHEHOC1OXHUgRmkT1Xx863ZcQVQpBNgabad5pccI8hwJjFvDjJl6D0sa8aK9muyhm6SaoX2ui5L3Vrwiae2tqmrcWfeI5MoNH_GvNZktzqL9VVxyayLZnGdTvb3l0XYDnhwcY21s8fEmE_VN5j8fmr1evprqdcGfpuxKhr7AGGHEtctWr8bFNXbLP7oGpgW5xqjl7GlxW2sPTGBeEZ1X_3CHzzgxqCLoYF9B2CY3c1oLMhWE-2YbcvlfphHCXzTI3HriaZVU5HTPWx9ox7A",
+										"disabled": true
+									},
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"query\": {\n        \"account_id_src\": 1,\n        \"account_id_dest\": 2,\n        \"trans_desc\": \"O tranzactie - returnata\",\n        \"trans_amount\": 30\n    }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{TEST_BASE_API_URL}}/web/transactions/save",
+									"host": [
+										"{{TEST_BASE_API_URL}}"
+									],
+									"path": [
+										"web",
+										"transactions",
+										"save"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "/web/auth/login WEB Master",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"wiremock_master\",\n    \"password\": \"wiremock_master\",\n    \"auth_mode\": \"SUPERADMIN\"\n}",
+							"options": {
+								"raw": {}
+							}
+						},
+						"url": {
+							"raw": "{{TEST_BASE_API_URL}}/web/auth/login",
+							"host": [
+								"{{TEST_BASE_API_URL}}"
+							],
+							"path": [
+								"web",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/web/auth/login NORMAL",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"john\",\n    \"password\": \"tudoroiu\",\n    \"auth_mode\": \"normal\"\n}",
+							"options": {
+								"raw": {}
+							}
+						},
+						"url": {
+							"raw": "{{TEST_BASE_API_URL}}/web/auth/login",
+							"host": [
+								"{{TEST_BASE_API_URL}}"
+							],
+							"path": [
+								"web",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "c90ed5d4-5388-453d-8733-f1c71b2bc9ab",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "a375b7e9-9641-44a3-ba22-6f026be40e0c",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJhbGciOiJSUzI1NiJ9.eyJmaXJzdG5hbWUiOm51bGwsIm1haWwiOm51bGwsInVzZXJfaWQiOjIsInNjb3BlIjpbIndpcmVtb2NrIiwiZGVtbyJdLCJleHAiOjE1OTIyMzI0MTcsImRlbW8iOlsic3VwZXJhZG1pbl9yb2xlIl0sImlhdCI6MTU5MjIwMzYxNywiY2xpZW50X2lkIjoic2VjdXJpdHkub2F1dGgyLmNsaWVudC5jbGllbnQtaWQiLCJhdXRob3JpdGllcyI6WyJST0xFX1VTRVIiXSwianRpIjoiYkhHa3o3aXhwVjQ3YnhrVWtucmY5dUFjcFBXSkhiS0czaFBKNG5xUUpRZ1RCck41RjBPWEhINSIsInVzZXJuYW1lIjpudWxsLCJsYXN0bmFtZSI6bnVsbH0.xbCni1QVueNf0xglfmGyNVq43f6ZKtqW6H-SErcr-nVW4rI2uTpgF6HP2crWD81xRBda9gQ_3E3FL4zPL_lNAzsSdADp2BN6thEOAhL0FLgNGLx1pFW_kUFg0dxAx-qmP5NK1n8GkqWQonERjtmas85li8ymAvtpCa0EWupqpgBEyxwTMNvvUmMIlm_exMESKOzVCtaoMWh4409YmDz23e7q0d6ClYBo_snVItADxGpD9bsMB_MAIdTsTZdPsfIlk5tI4uo-mutjsDbtNM_Rbtu5FCxuZy5K8szoWpTot4zALOkA6-FjMLutrVRF4IN4mkc3qp2eb3hmPBRs7gIdyg",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "e4cfd398-7c77-434b-a43b-b7f61865997b",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "ad102ec4-8a33-45b4-83c3-d2faebc36e31",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "372b3a74-77c6-471d-8798-0553d33d4ff7",
+			"key": "TEST_BASE_API_URL",
+			"value": "http://localhost:9002/demo-wiremock",
+			"type": "string"
+		}
+	],
+	"protocolProfileBehavior": {}
+}
