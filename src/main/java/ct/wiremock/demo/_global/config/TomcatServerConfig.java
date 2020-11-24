@@ -1,5 +1,6 @@
 package ct.wiremock.demo._global.config;
 
+import ct.wiremock.demo._global.service.TomcatServerConfigService;
 import org.apache.catalina.Context;
 import org.apache.catalina.connector.Connector;
 import org.apache.tomcat.util.descriptor.web.SecurityCollection;
@@ -8,7 +9,6 @@ import org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactor
 import org.springframework.boot.web.servlet.server.ServletWebServerFactory;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import ct.wiremock.demo._global.service.TomcatServerConfigService;
 
 @Configuration
 public class TomcatServerConfig extends TomcatServerConfigService {

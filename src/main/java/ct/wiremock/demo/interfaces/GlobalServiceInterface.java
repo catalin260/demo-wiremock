@@ -3,7 +3,7 @@ package ct.wiremock.demo.interfaces;
 import java.util.List;
 import java.util.Map;
 
-public interface GenericServiceInterface {
+public interface GlobalServiceInterface {
 	Object getById(Map<String, Object> params);
 	int insert(Map<String, Object> params);
 	void update(Map<String, Object> params);

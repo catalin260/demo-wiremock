@@ -1,12 +1,13 @@
 package ct.wiremock.demo.abstractClasses;
 
 import ct.wiremock.demo._global.service.GlobalService;
+import ct.wiremock.demo.interfaces.GlobalServiceInterface;
 
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public abstract class AbstractService extends GlobalService {
+public abstract class AbstractService extends GlobalService implements GlobalServiceInterface {
 	public String DB_key = "whatever";
 	public String mainTblAlias = "";
 	
@@ -32,5 +33,15 @@ public abstract class AbstractService extends GlobalService {
 	
 	public void update(Map<String, Object> params) {
 		DB.executeUpdate(DB_key + "update", params);
+	}
+	
+	@Override
+	public Object getById(Map<String, Object> params) {
+		return null;
+	}
+	
+	@Override
+	public int delete(Map<String, Object> params) {
+		return 0;
 	}
 }

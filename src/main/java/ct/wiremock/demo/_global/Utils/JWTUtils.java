@@ -1,5 +1,6 @@
 package ct.wiremock.demo._global.Utils;
 
+import ct.wiremock.demo._global.config.Config;
 import ct.wiremock.demo._global.enums.AuthMode;
 import ct.wiremock.demo._global.enums.Roles;
 import ct.wiremock.demo.service.auth.AuthService;
@@ -14,7 +15,6 @@ import org.springframework.core.io.Resource;
 import org.springframework.core.io.ResourceLoader;
 import org.springframework.lang.Nullable;
 import org.springframework.stereotype.Service;
-import ct.wiremock.demo._global.config.Config;
 
 import java.io.IOException;
 import java.io.InputStream;

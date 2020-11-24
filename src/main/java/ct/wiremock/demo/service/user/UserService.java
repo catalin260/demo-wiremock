@@ -6,13 +6,14 @@ import ct.wiremock.demo._global.Utils.crypto.CryptoUtil;
 import ct.wiremock.demo._global.config.Config;
 import ct.wiremock.demo.abstractClasses.AbstractService;
 import ct.wiremock.demo.service.auth.AuthService;
-import ct.wiremock.demo._global.service.GlobalService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import java.security.Principal;
-import java.util.*;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 @Service
 public class UserService extends AbstractService {

@@ -2,7 +2,6 @@ package ct.wiremock.demo.service.transactions;
 
 import ct.wiremock.demo._global.enums.TransactionStatus;
 import ct.wiremock.demo.abstractClasses.AbstractService;
-import ct.wiremock.demo.interfaces.GenericServiceInterface;
 import ct.wiremock.demo.service.accounts.AccountsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -12,23 +11,13 @@ import java.util.List;
 import java.util.Map;
 
 @Service
-public class TransactionsService extends AbstractService implements GenericServiceInterface {
+public class TransactionsService extends AbstractService {
 	@Autowired
 	private AccountsService accountsService;
 	
 	public TransactionsService() {
 		this.DB_key = "TransactionsService_";
 		this.mainTblAlias = "t";
-	}
-	
-	@Override
-	public Object getById(Map<String, Object> params) {
-		return null;
-	}
-	
-	@Override
-	public int delete(Map<String, Object> params) {
-		return 0;
 	}
 	
 	@Override
