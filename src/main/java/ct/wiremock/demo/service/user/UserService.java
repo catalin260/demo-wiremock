@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.PostConstruct;
 import java.security.Principal;
 import java.util.HashMap;
 import java.util.List;
@@ -27,8 +28,10 @@ public class UserService extends AbstractService {
 	@Autowired
 	protected Config config;
 	
-	public UserService() {
+	@PostConstruct
+	public void initServiceData() {
 		this.DB_key = "UserService_";
+		this.mainTblAlias = "";
 	}
 	
 	public ResponseEntity<Principal> get() {

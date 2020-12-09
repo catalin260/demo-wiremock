@@ -1,5 +1,6 @@
 package ct.wiremock.demo.interfaces;
 
+import javax.annotation.PostConstruct;
 import java.util.List;
 import java.util.Map;
 
@@ -10,4 +11,6 @@ public interface GlobalServiceInterface {
 	int delete(Map<String, Object> params);
 	List list(Map<String, Object> filters);
 	
+	@PostConstruct
+	void initServiceData();
 }

@@ -3,11 +3,14 @@ package ct.wiremock.demo.service.accounts;
 import ct.wiremock.demo.abstractClasses.AbstractService;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.PostConstruct;
 import java.util.Map;
 
 @Service
 public class AccountsService extends AbstractService {
-	public AccountsService() {
+	
+	@PostConstruct
+	public void initServiceData() {
 		this.DB_key = "AccountsService_";
 		this.mainTblAlias = "a";
 	}

@@ -6,6 +6,7 @@ import ct.wiremock.demo.service.accounts.AccountsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.PostConstruct;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -15,7 +16,8 @@ public class TransactionsService extends AbstractService {
 	@Autowired
 	private AccountsService accountsService;
 	
-	public TransactionsService() {
+	@PostConstruct
+	public void initServiceData() {
 		this.DB_key = "TransactionsService_";
 		this.mainTblAlias = "t";
 	}
